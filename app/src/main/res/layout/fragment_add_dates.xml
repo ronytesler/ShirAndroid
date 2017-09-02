@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.shir.androidfinalproject.Fragments.AddDatesFragment">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="3dp"
+       android:text="Set event last update date"/>
+
+    <EditText
+        android:id="@+id/et_last_update_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Set event time"/>
+
+    <NumberPicker
+        android:id="@+id/np_event_time"
+        android:layout_margin="3dp"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Add date"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/et_add_event_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:ems="10"
+            android:inputType="date" />
+        <ImageView
+            android:id="@+id/iv_add_date"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/add_button"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_dates_list"
+        android:layout_margin="3dp">
+
+    </ListView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_invite_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/next_button"
+        app:backgroundTint="@color/iconBack"
+        app:layout_anchor="@id/lv_dates_list"
+        app:layout_anchorGravity="bottom|right|end"
+      />
+
+
+
+</LinearLayout>

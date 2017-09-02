@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.shir.androidfinalproject.Activities.EventDetailsActivity"
+    android:background="@color/torkiz">
+
+    <ImageView
+        android:id="@+id/event_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/avatar_poe84it"
+        android:scaleType="fitXY"
+        android:layout_margin="3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_margin="3dp">
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/event_date"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="MAY 21"
+                android:textAlignment="center" />
+            <Spinner
+                android:id="@+id/event_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:foreground="@color/blue"
+                android:textColor="@color/colorAccent">
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/event_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Tomorrow at 12 AM - 5 AM" />
+            <TextView
+                android:id="@+id/event_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Haaliya 62, Tel - Aviv"
+                android:layout_margin="3dp"/>
+            <TextView
+                android:id="@+id/event_invitation_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hosted by shir bruchim"
+                android:layout_margin="3dp"/>
+            <Button
+                android:id="@+id/btn_event_preference"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:background="@color/lightBlue"
+                android:onClick="preferenceClickHandler"
+                android:text="Set your event preference"
+                android:textColor="@color/white"
+                android:layout_margin="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tabs"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:tabMode="fixed"-->
+            <!--app:tabGravity="fill"/>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"  />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/event_users_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="40 invited: 3 going, 5 not going"/>
+            <TextView
+                android:id="@+id/event_show_all_users"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="3dp"
+                android:clickable="true"
+                android:linksClickable="true"
+                android:text="show all" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/avatar_poe84it" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/avatar_poe84it" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/avatar_poe84it" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
