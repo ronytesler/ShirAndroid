@@ -74,19 +74,17 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="230dp"
         android:id="@+id/lv_dates_list"
         android:layout_margin="3dp">
     </ListView>
-    <android.support.design.widget.FloatingActionButton
+    <ImageView
         android:id="@+id/btn_invite_friends"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/next_button"
-        app:backgroundTint="@color/iconBack"
-        app:layout_anchor="@id/lv_dates_list"
-        app:layout_anchorGravity="bottom|right|end"
-      />
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/next_button" />
+
 </LinearLayout>

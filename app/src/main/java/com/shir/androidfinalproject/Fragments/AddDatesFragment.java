@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -28,39 +29,28 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link AddDatesFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link AddDatesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class AddDatesFragment extends Fragment
         implements View.OnClickListener,
         DatePickerDialog.OnDateSetListener,
         TimePickerDialog.OnTimeSetListener,
         AdapterView.OnItemClickListener{
+
     public static final String TAG = "AddDatesFragment";
 
-    boolean bIsAddDate;
     TextView tvLastEventUpdaeDate;
     ImageView ivAddLastUpdateDate;
-    Date dtLastUpdate;
-
     NumberPicker npDuration;
-    int nDuration;
-
     TextView tvAddDate;
     TextView tvAddTime;
     ImageView ivAddDate;
-    Date dtCurrAddDate;
-    int year,  month, dayOfMonth, hourOfDay, minute;
-
     ListView lvDatesList;
-    ArrayList<EventDate> lstEventDates;
+    ImageView btnInviteFriends;
 
-    FloatingActionButton btnInviteFriends;
+    boolean bIsAddDate;
+    Date dtLastUpdate, dtCurrAddDate;
+    int nDuration, year,  month, dayOfMonth, hourOfDay, minute;
+    ArrayList<EventDate> lstEventDates;
+    ListAdapter adapter;
 
     private AddDatesListener mListener;
 
@@ -86,7 +76,6 @@ public class AddDatesFragment extends Fragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            // mStudent = (Student) getArguments().getSerializable(STUDENT);
         }
     }
 
@@ -96,16 +85,14 @@ public class AddDatesFragment extends Fragment
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add_dates, container, false);
 
-
         tvLastEventUpdaeDate = (TextView) view.findViewById(R.id.tv_last_update_date);
         ivAddLastUpdateDate = (ImageView) view.findViewById(R.id.iv_last_update_date);
         npDuration = (NumberPicker) view.findViewById(R.id.np_duration);
         tvAddDate = (TextView) view.findViewById(R.id.tv_add_date);
         tvAddTime = (TextView) view.findViewById(R.id.tv_add_time);
         ivAddDate = (ImageView) view.findViewById(R.id.iv_add_date);
-
         lvDatesList = (ListView) view.findViewById(R.id.lv_dates_list);
-        btnInviteFriends = (FloatingActionButton) view.findViewById(R.id.btn_invite_friends);
+        btnInviteFriends = (ImageView) view.findViewById(R.id.btn_invite_friends);
 
         // listening to single list item on click
         npDuration.setOnClickListener(this);
@@ -118,22 +105,7 @@ public class AddDatesFragment extends Fragment
 
         initDataMembers();
 
-        ListAdapter adapter = new VotesListAdapter(getActivity(), lstEventDates);
-
-//        //Fill data into listview.............
-//        if(arrListItems.size()>0)
-//        {
-//            adapteritem=new ItemAdapter(MainActivity.this, arrListItems);
-//            listviewitems.setAdapter(adapteritem);
-//        }
-//        else
-//        {
-//            txtNoitemfound.setVisibility(View.VISIBLE);
-//            listviewitems.setVisibility(View.GONE);
-//            btnEdit.setVisibility(View.INVISIBLE);
-//            btnClearAll.setVisibility(View.INVISIBLE);
-//
-//        }
+        //adapter = new VotesListAdapter(getActivity(), lstEventDates);
 
         // Binding resources Array to ListAdapter
         lvDatesList.setAdapter(adapter);
@@ -141,25 +113,12 @@ public class AddDatesFragment extends Fragment
         // listening to single list item on click
         lvDatesList.setOnItemClickListener(this);
 
-
-//
-//        Students = Model.Instance.getAllStudets();
-//        ListAdapter adapter = new StudentListAdapter(getActivity(), Students);
-//
-//        lvStudents = (ListView) view.findViewById(R.id.lv_students);
-//
-//        // Binding resources Array to ListAdapter
-//        lvStudents.setAdapter(adapter);
-//
-//        // listening to single list item on click
-//        lvStudents.setOnItemClickListener(this);
-
         return view;
     }
 
     private void initDataMembers(){
         nDuration = 1;
-        lstEventDates = new ArrayList<EventDate>();
+        lstEventDates = new ArrayList<>();
         year = 0;
         month = 0;
         dayOfMonth = 0;
@@ -197,15 +156,7 @@ public class AddDatesFragment extends Fragment
                 else{
                     EventDate ed = new EventDate(dtCurrAddDate);
                     lstEventDates.add(ed);
-
-                    //lvDatesList.addView();
                 }
-                //TextView tvNewDate = new TextView();
-//                datesList.addView(tvNewDate);
-//                EventDate ed = new EventDate();
-                //ed.
-//                        lstEventDates.add();
-//                onUpdateStudent();
                 break;
             case R.id.btn_invite_friends:
                 onInviteFriends();
@@ -216,11 +167,11 @@ public class AddDatesFragment extends Fragment
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        switch (adapterView.getId()) {
-//            case R.id.lv_students:
-//                onShowStudentDetails(position);
-//                break;
-//        }
+        switch (view.getId()) {
+            case R.id.item_row:
+                //onShowStudentDetails(position);
+                break;
+        }
     }
 
     private void onInviteFriends() {
@@ -229,9 +180,13 @@ public class AddDatesFragment extends Fragment
             tvLastEventUpdaeDate.setError("Must to Enter a last update date");
             return;
         }
+        else if (lstEventDates.isEmpty()){
+            tvAddDate.setError("Must to add a date option");
+            return;
+        }
 
         if (mListener != null) {
-            mListener.onInviteFriendsClick(dtLastUpdate, nDuration);
+            mListener.onInviteFriendsClick(dtLastUpdate, nDuration, lstEventDates);
         }
     }
 
@@ -251,8 +206,6 @@ public class AddDatesFragment extends Fragment
         super.onDetach();
         mListener = null;
     }
-
-    // <editor-fold defaultstate="collapsed" desc="date time picker">
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int day) {
@@ -292,10 +245,17 @@ public class AddDatesFragment extends Fragment
         tvAddTime.setText(hourOfDay + ":" + minute);
     }
 
-    // </editor-fold>
-
+//    // Method for remove Single item from list
+//    protected void removeItemFromList(int position)
+//    {
+//        final int deletePosition = position;
+//
+//        lstVotes.remove(deletePosition);
+//        this.notifyDataSetChanged();
+//        this.notifyDataSetInvalidated();
+//    }
     public interface AddDatesListener {
-        void onInviteFriendsClick(Date lastUpdate, int duration);
+        void onInviteFriendsClick(Date lastUpdate, int duration, ArrayList<EventDate> EventDates);
     }
 }
 
