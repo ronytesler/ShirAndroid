@@ -97,6 +97,7 @@ public class AddDatesFragment extends Fragment
         // listening to single list item on click
         npDuration.setOnClickListener(this);
         ivAddDate.setOnClickListener(this);
+        ivAddLastUpdateDate.setOnClickListener(this);
         btnInviteFriends.setOnClickListener(this);
 
         npDuration.setMaxValue(8760);
@@ -131,18 +132,22 @@ public class AddDatesFragment extends Fragment
         switch (view.getId()) {
             case R.id.iv_last_update_date:
                 bIsAddDate = false;
-                DialogFragments.DatePickerFragment fragment1 = new DialogFragments.DatePickerFragment();
-                fragment1.show(getFragmentManager(), "date");
+//                DialogFragments.DatePickerFragment fragment1 = new DialogFragments.DatePickerFragment();
+//                fragment1.show(getFragmentManager(), "date");
+                String strLastUpdate = tvLastEventUpdaeDate.getText().toString();
+                if (TextUtils.isEmpty(strLastUpdate)) {
+                    tvLastEventUpdaeDate.setError("Must to Enter a Last Update date");
+                    dtLastUpdate = (Date)tvLastEventUpdaeDate.getText();
+                    return;
+                }
                 break;
             case R.id.np_duration:
                 nDuration = npDuration.getValue();
                 break;
             case R.id.iv_add_date:
                 bIsAddDate = true;
-
-                DialogFragments.DatePickerFragment fragment2 = new DialogFragments.DatePickerFragment();
-                fragment2.show(getFragmentManager(), "date");
-
+//                DialogFragments.DatePickerFragment fragment2 = new DialogFragments.DatePickerFragment();
+//                fragment2.show(getFragmentManager(), "date");
                 String strDate = tvAddDate.getText().toString();
                 String strTime = tvAddTime.getText().toString();
                 if (TextUtils.isEmpty(strDate)) {
@@ -154,6 +159,10 @@ public class AddDatesFragment extends Fragment
                     return;
                 }
                 else{
+                    dtCurrAddDate = (Date)tvAddDate.getText();
+                    Date d = (Date)tvAddTime.getText();
+                    dtCurrAddDate.setHours(d.getHours());
+                    dtCurrAddDate.setMinutes(d.getMinutes());
                     EventDate ed = new EventDate(dtCurrAddDate);
                     lstEventDates.add(ed);
                 }

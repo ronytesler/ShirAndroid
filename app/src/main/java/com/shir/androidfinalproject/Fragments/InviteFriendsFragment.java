@@ -14,9 +14,10 @@ import com.shir.androidfinalproject.R;
 import java.util.ArrayList;
 
 public class InviteFriendsFragment extends Fragment {
-    private static final String TAG = "InviteFriendsFragment";
+    public static final String TAG = "InviteFriendsFragment";
     private static final String FRIENDS_LIST = "FRIENDS_LIST";
     private InviteFriendsListener mListener;
+    private ArrayList<User> lstFriends;
 
     public InviteFriendsFragment() {
         // Required empty public constructor
@@ -25,7 +26,7 @@ public class InviteFriendsFragment extends Fragment {
     public static InviteFriendsFragment newInstance(ArrayList<User> friendsList) {
         InviteFriendsFragment fragment = new InviteFriendsFragment();
         Bundle args = new Bundle();
-
+        args.putSerializable(FRIENDS_LIST, friendsList);
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,7 +35,7 @@ public class InviteFriendsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-
+            lstFriends = (ArrayList<User>)getArguments().getSerializable(FRIENDS_LIST);
         }
     }
 
@@ -42,7 +43,9 @@ public class InviteFriendsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_invite_friends, container, false);
+        View view = inflater.inflate(R.layout.fragment_invite_friends, container, false);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
