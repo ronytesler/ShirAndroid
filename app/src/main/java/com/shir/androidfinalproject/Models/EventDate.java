@@ -8,4 +8,8 @@ import java.util.Date;
 
 public class EventDate extends Votes  {
     private Date date;
+
+    public EventDate (Date date){
+        this.date = date;
+    }
 }
