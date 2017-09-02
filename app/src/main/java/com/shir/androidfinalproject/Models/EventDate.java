@@ -1,5 +1,6 @@
 package com.shir.androidfinalproject.Models;
 
+import java.text.DateFormat;
 import java.util.Date;
 
 /**
@@ -7,9 +8,15 @@ import java.util.Date;
  */
 
 public class EventDate extends Votes  {
-    private Date date;
+    public Date date;
 
     public EventDate (Date date){
         this.date = date;
+    }
+
+    public String displayDate() {
+        DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
+        String str = dateFormat.format(this.date);
+        return str;
     }
 }
