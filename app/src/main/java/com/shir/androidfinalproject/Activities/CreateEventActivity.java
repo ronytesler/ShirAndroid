@@ -10,6 +10,7 @@ import com.shir.androidfinalproject.Fragments.AddDatesFragment;
 import com.shir.androidfinalproject.Fragments.AddEventDetailsFragment;
 import com.shir.androidfinalproject.Fragments.AddLocationsFragment;
 import com.shir.androidfinalproject.Fragments.InviteFriendsFragment;
+import com.shir.androidfinalproject.Models.EventDate;
 import com.shir.androidfinalproject.R;
 
 import java.util.ArrayList;
@@ -95,7 +96,7 @@ public class CreateEventActivity extends AppCompatActivity implements AddDatesFr
     }
 
     @Override
-    public void onInviteFriendsClick(Date lastUpdate, int duration) {
+    public void onInviteFriendsClick(Date lastUpdate, int duration, ArrayList<EventDate> EventDates) {
 
     }
 }

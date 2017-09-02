@@ -2,118 +2,22 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Rony\.android\build-cache\d35850a9c79eee3e92d7d8cd353b0e2a30864972\output\jars\classes.jar"
+        jar="C:\Users\Rony\.android\build-cache\869c8377724790557131004535cee44033f2f25d\output\jars\classes.jar"
         revision="25.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d69f48ca411c2c597eb64bb53b11d1cbb600aa51.jar" />
+        sha1="03589bac12234193d4a7a9b106a6db1b367afe99">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f92d0ab70fe0878aca984c05f3546f33f1a67021.jar" />
     </item>
     <item
-        jar="C:\Users\Rony\.android\build-cache\aeb9f69e416f088282548625fe4e11a08d445c7e\output\jars\classes.jar"
+        jar="C:\Users\Rony\.android\build-cache\7f98336f1da7782efbf0a5395b9857854c4025eb\output\jars\classes.jar"
         revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4a229b576b88caba49e48cd1586ee90e6116262e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\fbe429f4a8e9f474848537ab646597c755df31ec\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="3da345d7c08a7e9d83a34d8723057624b941c0ea">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a02557bddaa47d52e0b31748046b37a0927e8a7a.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\456abb1133ae2c94d5d3dbe17f1aea0fc5f22213\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="cad6f251cba07624f49b0c5b6287731a3c9957b8">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f84eae67c1d17355922d1eb44eda097f1eff7dad.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\35b9e1ddcb87ed5fa89416d008c761ae3dbea0ac\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-97df5cee2f683fe5848ad1e6a8ce65b76d17e78f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar"
-        revision="25.0.2"
-        sha1="cc174c559b5177982887bf6e1b76003aebad9516">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bolts-android-1.4.0-3acad1f41aa71f6caf5b669f494200f38220015b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\ec37bdabbcb0fb303ed5b88a96c4330a30e13b36\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-07aec6008fad903e6d19e8fa68ee5c217087f624.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\AppData\Local\Android\sdk1\platforms\android-25\optional\org.apache.http.legacy.jar"
-        revision="25.0.2"
-        sha1="f3d8ef56b30e630eb84718ee1b10a38b38c057c0">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-527a43d064e62347b8725056fd524e5f8916838c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\AppData\Local\Android\sdk1\platforms\android-25\android.jar"
-        revision="25.0.2"
-        sha1="ee6109bffb77e2a8508a9faf3eceab577ca73709">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-a6b35f4bcc688d29d0eada0c7020f7a931822cd4.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\b94036d7c9d40ac8c01914de72fc87c5ec90bdbb\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-66886aa0a2af43bbee1ed6224149093f337ef196.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\6d2ba1833b51874773fa8a4a16a0ff341a7d091c\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="76a7a625df0e9027b53dbed6e9ba9a6031a42e39">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-91c35f778a9e1dd520cdc8c8b2c7e9c3d8004415.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\fd7daafe293d30055f0e6deb68512ff172c549ee\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c866f65625f8697ed2888e2b886cf720994ce5b0.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\4484f49b60a908cb4d42d8f830d6d90e6b6e8378\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a7036398526b53ab339001b06a32cb094e1f635f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-fc820010fb9e1045b48f558b4cd0fc4f009cc3c3.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\a12426668459adac860d1c8438d2a205961f3774\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="c478771eacdf8217e093a1b967b8152cfdaadc94">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-231b4b497b56d88129a00bee74eb2f172257c80e.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.0.2\b9cd8fc6bd15cb915735d34535db30ece0c44603\constraint-layout-solver-1.0.2.jar"
-        revision="25.0.2"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.2-34c836d28a2c129003153e3a37eeb2b850c5f7e6.jar" />
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9aa2318cc46af3d17588074849ed4ec61f82441c.jar" />
     </item>
     <item
         jar="C:\Users\Rony\.android\build-cache\22bf1a94e3cedb1f8b609f09566a211688ad0174\output\jars\classes.jar"
         revision="25.0.2"
         sha1="e09663005d70dcedff0bb77211b9ac52d8b69421">
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6d34bc76c183eb30c042285ffa2eb14b0900864f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        revision="25.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\glide-3.7.0-d164e54aa77fd97aea7165a0b0508e4bf8ce0707.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
-        revision="25.0.2"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bolts-applinks-1.4.0-9466ebbdcf274b71e0d11de0af4fc554f77b59fc.jar" />
     </item>
     <item
         jar="C:\Users\Rony\.android\build-cache\ab89ea4d64c397aebd7302b594cf6d5a047e7963\output\jars\classes.jar"
@@ -134,10 +38,10 @@
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-68f2159a18a52a3b35918c447641ec8bfe272c64.jar" />
     </item>
     <item
-        jar="C:\Users\Rony\.android\build-cache\6c3caebedd9c28d1e035f21af989ba8f3cd470b0\output\jars\classes.jar"
+        jar="C:\Users\Rony\.android\build-cache\ba59fffba79c4e7cd0fbdeb44883b482d298bb29\output\jars\classes.jar"
         revision="25.0.2"
-        sha1="807751a24cf96566fd8675517c94d8463cf364db">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3d76ee8bc76a988295682f31f8b7bb40972dd2de.jar" />
+        sha1="edba0aec4aedd4edb3a520b4ee87adc52be762da">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-1cc051c67103e826ecf0ff3e6ca88d5e789ca968.jar" />
     </item>
     <item
         jar="C:\Users\Rony\.android\build-cache\2350b40a585a17a78c402ec94408ba4835fd62d0\output\jars\classes.jar"
@@ -146,52 +50,16 @@
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-65e836b1d7bb505f9d1232db163f152e12581d1e.jar" />
     </item>
     <item
-        jar="C:\Users\Rony\.android\build-cache\869c8377724790557131004535cee44033f2f25d\output\jars\classes.jar"
+        jar="C:\Users\Rony\.android\build-cache\6c3caebedd9c28d1e035f21af989ba8f3cd470b0\output\jars\classes.jar"
         revision="25.0.2"
-        sha1="03589bac12234193d4a7a9b106a6db1b367afe99">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f92d0ab70fe0878aca984c05f3546f33f1a67021.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\90c3d63e90d8462990e88b407f1a53d79e56be69\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d63d215cc182d9b8863ec06e3248e71ed13d0f0f.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\6c0fef3c11cbb621dd388edb4017826ca7e95c8d\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-357ff69d0ad70ef7e358c3d26d8efa62eeea2b59.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\ba59fffba79c4e7cd0fbdeb44883b482d298bb29\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="edba0aec4aedd4edb3a520b4ee87adc52be762da">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-1cc051c67103e826ecf0ff3e6ca88d5e789ca968.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.android\build-cache\7f98336f1da7782efbf0a5395b9857854c4025eb\output\jars\classes.jar"
-        revision="25.0.2"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9aa2318cc46af3d17588074849ed4ec61f82441c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar"
-        revision="25.0.2"
-        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\core-3.3.0-7777dc5962954fa57273e88d2f43877cfc07bd75.jar" />
+        sha1="807751a24cf96566fd8675517c94d8463cf364db">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3d76ee8bc76a988295682f31f8b7bb40972dd2de.jar" />
     </item>
     <item
         jar="C:\Users\Rony\.android\build-cache\9ed4a85bc9de1507e15739752c8f0589bcd85161\output\jars\classes.jar"
         revision="25.0.2"
         sha1="28ed270c519ff2874343e0824808da2efda0df9c">
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3bcc997bc4d3238dd0a078127ac9c40061b3b5ab.jar" />
-    </item>
-    <item
-        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
-        revision="25.0.2"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bolts-tasks-1.4.0-857e3450090675fcdb8cf2922a0a419b3990ec23.jar" />
     </item>
     <item
         jar="C:\Users\Rony\.android\build-cache\e564c67cf95278dd3968756bcdab53239520a606\output\jars\classes.jar"
@@ -206,16 +74,148 @@
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2b7b273332e4700a73637a9fc0490ebdfe63da55.jar" />
     </item>
     <item
+        jar="C:\Users\Rony\.android\build-cache\90c3d63e90d8462990e88b407f1a53d79e56be69\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d63d215cc182d9b8863ec06e3248e71ed13d0f0f.jar" />
+    </item>
+    <item
         jar="C:\Users\Rony\.android\build-cache\2d4f57836738b3e7ad328e84606007be150f3999\output\jars\classes.jar"
         revision="25.0.2"
         sha1="36a6c288ed760d2d899126fa90761b84af10dd2d">
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-dc2e36f47e6e63f7f623475e73067abd412b504c.jar" />
     </item>
     <item
+        jar="C:\Users\Rony\.android\build-cache\fbe429f4a8e9f474848537ab646597c755df31ec\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="3da345d7c08a7e9d83a34d8723057624b941c0ea">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a02557bddaa47d52e0b31748046b37a0927e8a7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\6c0fef3c11cbb621dd388edb4017826ca7e95c8d\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-357ff69d0ad70ef7e358c3d26d8efa62eeea2b59.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.4.0\cc174c559b5177982887bf6e1b76003aebad9516\bolts-android-1.4.0.jar"
+        revision="25.0.2"
+        sha1="cc174c559b5177982887bf6e1b76003aebad9516">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bolts-android-1.4.0-3acad1f41aa71f6caf5b669f494200f38220015b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\AppData\Local\Android\sdk1\platforms\android-25\optional\org.apache.http.legacy.jar"
+        revision="25.0.2"
+        sha1="f3d8ef56b30e630eb84718ee1b10a38b38c057c0">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-527a43d064e62347b8725056fd524e5f8916838c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.0.2\b9cd8fc6bd15cb915735d34535db30ece0c44603\constraint-layout-solver-1.0.2.jar"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.2-34c836d28a2c129003153e3a37eeb2b850c5f7e6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.google.zxing\core\3.3.0\73c49077166faa4c3c0059c5f583d1d7bd1475fe\core-3.3.0.jar"
+        revision="25.0.2"
+        sha1="73c49077166faa4c3c0059c5f583d1d7bd1475fe">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\core-3.3.0-7777dc5962954fa57273e88d2f43877cfc07bd75.jar" />
+    </item>
+    <item
         jar="C:\Users\Rony\.android\build-cache\d29411ffecffb6795d98879bfff8309e31325183\output\jars\classes.jar"
         revision="25.0.2"
         sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
         <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-0c81b6c30531b7d8aa5b92ea37e3e68176b8de79.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        revision="25.0.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bolts-applinks-1.4.0-9466ebbdcf274b71e0d11de0af4fc554f77b59fc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        revision="25.0.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bolts-tasks-1.4.0-857e3450090675fcdb8cf2922a0a419b3990ec23.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        revision="25.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\glide-3.7.0-d164e54aa77fd97aea7165a0b0508e4bf8ce0707.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\fd7daafe293d30055f0e6deb68512ff172c549ee\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c866f65625f8697ed2888e2b886cf720994ce5b0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\aeb9f69e416f088282548625fe4e11a08d445c7e\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4a229b576b88caba49e48cd1586ee90e6116262e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\4484f49b60a908cb4d42d8f830d6d90e6b6e8378\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a7036398526b53ab339001b06a32cb094e1f635f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\456abb1133ae2c94d5d3dbe17f1aea0fc5f22213\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="cad6f251cba07624f49b0c5b6287731a3c9957b8">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f84eae67c1d17355922d1eb44eda097f1eff7dad.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\d35850a9c79eee3e92d7d8cd353b0e2a30864972\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d69f48ca411c2c597eb64bb53b11d1cbb600aa51.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\ec37bdabbcb0fb303ed5b88a96c4330a30e13b36\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-07aec6008fad903e6d19e8fa68ee5c217087f624.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\35b9e1ddcb87ed5fa89416d008c761ae3dbea0ac\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-97df5cee2f683fe5848ad1e6a8ce65b76d17e78f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\6d2ba1833b51874773fa8a4a16a0ff341a7d091c\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="76a7a625df0e9027b53dbed6e9ba9a6031a42e39">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-91c35f778a9e1dd520cdc8c8b2c7e9c3d8004415.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-fc820010fb9e1045b48f558b4cd0fc4f009cc3c3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\AppData\Local\Android\sdk1\platforms\android-25\android.jar"
+        revision="25.0.2"
+        sha1="ee6109bffb77e2a8508a9faf3eceab577ca73709">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-a6b35f4bcc688d29d0eada0c7020f7a931822cd4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\b94036d7c9d40ac8c01914de72fc87c5ec90bdbb\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-66886aa0a2af43bbee1ed6224149093f337ef196.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rony\.android\build-cache\a12426668459adac860d1c8438d2a205961f3774\output\jars\classes.jar"
+        revision="25.0.2"
+        sha1="c478771eacdf8217e093a1b967b8152cfdaadc94">
+        <dex dex="C:\shir\ShirAndroid\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-231b4b497b56d88129a00bee74eb2f172257c80e.jar" />
     </item>
 
 </items>
