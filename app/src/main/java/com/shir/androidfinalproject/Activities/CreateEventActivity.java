@@ -9,10 +9,13 @@ import com.shir.androidfinalproject.Fragments.AddLocationsFragment;
 import com.shir.androidfinalproject.Fragments.InviteFriendsFragment;
 import com.shir.androidfinalproject.R;
 
+import java.util.Date;
+
 public class CreateEventActivity extends AppCompatActivity
-        implements AddDatesFragment.AddDatesListener,
-        AddLocationsFragment.AddLocationsListener,
-        InviteFriendsFragment.InviteFriendsListener {
+        implements AddDatesFragment.AddDatesListener
+//        AddLocationsFragment.AddLocationsListener,
+//        InviteFriendsFragment.InviteFriendsListener
+{
 
     private static final String TAG = "CreateEventActivity";
 
@@ -22,5 +25,10 @@ public class CreateEventActivity extends AppCompatActivity
         setContentView(R.layout.activity_create_event);
 
         Log.d(TAG, "onCreate: ");
+    }
+
+    @Override
+    public void onInviteFriendsClick(Date LastUpdate) {
+
     }
 }

@@ -11,27 +11,36 @@
        android:layout_height="wrap_content"
        android:layout_margin="3dp"
        android:text="Set event last update date"/>
-
-    <EditText
-        android:id="@+id/et_last_update_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:ems="10"
-        android:inputType="date" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_last_update_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:textSize="20dp"
+            android:text="02/09/2017"/>
+        <ImageView
+            android:id="@+id/iv_last_update_date"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/add_button"
+            android:layout_marginLeft="10dp"
+            android:onClick="onDatePickerClick"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:text="Set event time"/>
-
     <NumberPicker
         android:id="@+id/np_event_time"
-        android:layout_margin="3dp"
+        android:layout_height="80dp"
         android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_height="80dp"/>
+        android:layout_margin="3dp"
+        android:orientation="horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,7 +85,4 @@
         app:layout_anchor="@id/lv_dates_list"
         app:layout_anchorGravity="bottom|right|end"
       />
-
-
-
 </LinearLayout>

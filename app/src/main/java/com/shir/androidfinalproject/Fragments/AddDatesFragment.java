@@ -1,18 +1,17 @@
 package com.shir.androidfinalproject.Fragments;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
-import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -22,7 +21,11 @@ import android.widget.TextView;
 import com.shir.androidfinalproject.Models.EventDate;
 import com.shir.androidfinalproject.R;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,12 +35,19 @@ import java.util.ArrayList;
  * Use the {@link AddDatesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AddDatesFragment extends Fragment {
+public class AddDatesFragment extends Fragment
+        implements View.OnClickListener,
+        DatePickerDialog.OnDateSetListener {
     public static final String TAG = "AddDatesFragment";
     //private static final String STUDENT = "student";
 
-    EditText lastEventUpdaeDate;
+    TextView tvLastEventUpdaeDate;
+    ImageView ivAddLastUpdateDate;
+    Date dtLastUpdate;
+
     NumberPicker eventTime;
+    int nEventTime;
+
     EditText addEventStartDate;
     ImageView ivAddDate;
     ListView datesList;
@@ -56,6 +66,7 @@ public class AddDatesFragment extends Fragment {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
+     *
      * @return A new instance of fragment EditStudentFragment.
      */
     public static AddDatesFragment newInstance() {
@@ -70,7 +81,7 @@ public class AddDatesFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-           // mStudent = (Student) getArguments().getSerializable(STUDENT);
+            // mStudent = (Student) getArguments().getSerializable(STUDENT);
         }
     }
 
@@ -79,25 +90,71 @@ public class AddDatesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add_dates, container, false);
-        lastEventUpdaeDate = (EditText)view.findViewById(R.id.et_last_update_date);
-        eventTime = (NumberPicker)view.findViewById(R.id.np_event_time);
-        addEventStartDate = (EditText)view.findViewById(R.id.et_add_event_start_date);
-        ivAddDate = (ImageView)view.findViewById(R.id.iv_add_date);
-        datesList = (ListView)view.findViewById(R.id.lv_dates_list);
-        btnInviteFriends = (FloatingActionButton)view.findViewById(R.id.btn_invite_friends);
+
+        //last update date
+        tvLastEventUpdaeDate = (TextView) view.findViewById(R.id.tv_last_update_date);
+        ivAddLastUpdateDate = (ImageView) view.findViewById(R.id.iv_last_update_date);
+
+
+        eventTime = (NumberPicker) view.findViewById(R.id.np_event_time);
+        addEventStartDate = (EditText) view.findViewById(R.id.et_add_event_start_date);
+        ivAddDate = (ImageView) view.findViewById(R.id.iv_add_date);
+        datesList = (ListView) view.findViewById(R.id.lv_dates_list);
+        btnInviteFriends = (FloatingActionButton) view.findViewById(R.id.btn_invite_friends);
 
         // listening to single list item on click
         eventTime.setOnClickListener(this);
         ivAddDate.setOnClickListener(this);
         btnInviteFriends.setOnClickListener(this);
 
+        nEventTime = 1;
+        lstEventDates = new ArrayList<>();
+
+        eventTime.setMaxValue(8760);
+        eventTime.setMinValue(1);
+        eventTime.setWrapSelectorWheel(false);
+
         return view;
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.np_event_time:
+                nEventTime = eventTime.getValue();
+                break;
+            case R.id.iv_add_date:
+//                TextView tvNewDate = new TextView();
+//                datesList.addView(tvNewDate);
+//                EventDate ed = new EventDate();
+                //ed.
+//                        lstEventDates.add();
+//                onUpdateStudent();
+                break;
+            case R.id.btn_invite_friends:
+                onInviteFriends();
+
+                break;
+        }
+    }
+
+    private void onInviteFriends() {
+        String strLastUpdateDate = tvLastEventUpdaeDate.getText().toString();
+        if (TextUtils.isEmpty(strLastUpdateDate)) {
+            tvLastEventUpdaeDate.setError("Must to Enter a last update date");
+            return;
+        }
+
+        if (mListener != null) {
+            mListener.onInviteFriendsClick(dtLastUpdate);
+        }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof EditStudentListener) {
+        if (context instanceof AddDatesListener) {
             mListener = (AddDatesListener) context;
         } else {
             throw new RuntimeException(context.toString()
@@ -111,33 +168,43 @@ public class AddDatesFragment extends Fragment {
         mListener = null;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="date time picker">
+
+    public void onDatePickerClick(View view) {
+        DatePickerFragment fragment = new DatePickerFragment();
+        fragment.show(getFragmentManager(), "date");
+    }
+
+    private void setDate(final Calendar calendar) {
+        final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.MEDIUM);
+        dtLastUpdate = calendar.getTime();
+        tvLastEventUpdaeDate.setText(dateFormat.format(dtLastUpdate));
+    }
+
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.eventTime:
-                if (mListener != null) {
-                    mListener.onEditCancelClick();
-                }
-                break;
-            case R.id.ivAddDate:
-                onUpdateStudent();
-                break;
-            case R.id.btnInviteFriends:
-                onDeleteStudent();
-                break;
+    public void onDateSet(DatePicker view, int year, int month, int day) {
+        Calendar cal = new GregorianCalendar(year, month, day);
+        setDate(cal);
+    }
+
+    public static class DatePickerFragment extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+
+            return new DatePickerDialog(getActivity(),
+                    (DatePickerDialog.OnDateSetListener)
+                            getActivity(), year, month, day);
         }
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface AddDatesListener {
+    // </editor-fold>
 
+    public interface AddDatesListener {
+        void onInviteFriendsClick(Date LastUpdate);
     }
+}
+
