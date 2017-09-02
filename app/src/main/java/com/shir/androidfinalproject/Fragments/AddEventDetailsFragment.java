@@ -2,6 +2,7 @@ package com.shir.androidfinalproject.Fragments;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -25,7 +26,7 @@ public class AddEventDetailsFragment extends Fragment implements View.OnClickLis
     LinearLayout llEventImages;
     EditText etEventTitle;
     EditText etEventDescription;
-    FloatingActionButton btnAddLocation;
+    Button btnAddLocation;
 
     ArrayList<Bitmap> photosList;
     String strTitle;
@@ -57,7 +58,7 @@ public class AddEventDetailsFragment extends Fragment implements View.OnClickLis
         llEventImages = (LinearLayout)view.findViewById(R.id.ll_event_images);
         etEventTitle = (EditText)view.findViewById(R.id.et_event_title);
         etEventDescription= (EditText)view.findViewById(R.id.et_event_description);
-        btnAddLocation= (FloatingActionButton)view.findViewById(R.id.btn_add_location);
+        btnAddLocation= (Button) view.findViewById(R.id.btn_next_to_second_fragment);
 
         btnAddPhotos.setOnClickListener(this);
         btnAddLocation.setOnClickListener(this);
@@ -96,7 +97,7 @@ public class AddEventDetailsFragment extends Fragment implements View.OnClickLis
             case R.id.btn_add_photos:
                 //TODO SHIR - HOW GET PHOTOS FROM PHONE
                 break;
-            case R.id.btn_add_location:
+            case R.id.btn_next_to_second_fragment:
 
                 String title = etEventTitle.getText().toString();
                 String description = etEventDescription.getText().toString();
@@ -113,14 +114,15 @@ public class AddEventDetailsFragment extends Fragment implements View.OnClickLis
                     this.strDescription = description;
 
                     if (mListener != null)
-                        mListener.onAddLocationsClick
+                        mListener.onNextClick
                                 (this.photosList, this.strTitle, this.strDescription);
                 }
 
                 break;
         }
     }
+
     public interface AddEventDetailsListener {
-        void onAddLocationsClick(ArrayList<Bitmap> photosList, String Title, String Description);
+        void onNextClick(ArrayList<Bitmap> photosList, String Title, String Description);
     }
 }

@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.shir.androidfinalproject.Adapters.LocationsAdapter;
 import com.shir.androidfinalproject.R;
 
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class AddLocationsFragment extends Fragment implements View.OnClickListen
     ImageView btnAddDates;
 
     ArrayList<String> lstLocations;
-    ArrayAdapter<String> adapter;
+    LocationsAdapter adapter;
 
     public AddLocationsFragment() {
         // Required empty public constructor
@@ -58,16 +59,17 @@ public class AddLocationsFragment extends Fragment implements View.OnClickListen
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_add_locations, container, false);
 
-        etCurrLocation = (EditText)view.findViewById(R.id.tv_add_location);
-        lvLocationsList = (ListView)view.findViewById(R.id.lv_locations_list);
-        ivAddLocation = (ImageView)view.findViewById(R.id.iv_add_location);
-        btnAddDates = (ImageView)view.findViewById(R.id.btn_add_dates);
+        etCurrLocation = (EditText) view.findViewById(R.id.tv_add_location);
+        lvLocationsList = (ListView) view.findViewById(R.id.lv_locations_list);
+        ivAddLocation = (ImageView) view.findViewById(R.id.iv_add_location);
+        btnAddDates = (ImageView) view.findViewById(R.id.btn_add_dates);
 
         ivAddLocation.setOnClickListener(this);
         btnAddDates.setOnClickListener(this);
-
-        lstLocations = new ArrayList<>();
-
+        if (lstLocations == null)
+            lstLocations = new ArrayList<>();
+        adapter = new LocationsAdapter(getActivity(), lstLocations);
+        lvLocationsList.setAdapter(adapter);
         return view;
     }
 
@@ -90,18 +92,18 @@ public class AddLocationsFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.iv_add_location:
                 String loc = etCurrLocation.getText().toString();
 
                 if (TextUtils.isEmpty(loc)) {
-                    etCurrLocation.setError("Must to Enter a location");
+                    etCurrLocation.setError("Must enter a location");
                     return;
-                }
-                else{
-                   lstLocations.add(loc);
-                   //adapter = new ArrayAdapter<String>(getActivity(), R.id.lv_locations_list, lstLocations);
-                   lvLocationsList.setAdapter(adapter);
+                } else {
+                    adapter.add(loc);
+                    etCurrLocation.setText("");
+                    //lstLocations.add(loc);
+                    adapter.notifyDataSetChanged();
                 }
 
                 break;

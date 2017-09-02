@@ -11,6 +11,7 @@ public class DataManager {
 
     public static final String CHECK = "CHECK";
     public static final String IS_CONNECTED_WITH_FACEBOOK = "IS_CONNECTED_WITH_FACEBOOK";
+    public static final String USER_ID = "USER_ID";
     private static DataManager ourInstance;
     private Context mContext;
 
@@ -27,6 +28,7 @@ public class DataManager {
 
     public void setLoginWithFacebook(boolean isLogin) {
         getSharedPreferences().edit().putBoolean(IS_CONNECTED_WITH_FACEBOOK, isLogin).apply();
+        getSharedPreferences().edit().putString(USER_ID, null).apply();
     }
 
     public boolean isLoggedIn() {
@@ -40,5 +42,13 @@ public class DataManager {
     public void destroy() {
         mContext = null;
         ourInstance = null;
+    }
+
+    public void saveUserId(String id) {
+        getSharedPreferences().edit().putString(USER_ID, id).apply();
+    }
+
+    public String getUserId() {
+        return getSharedPreferences().getString(USER_ID, null);
     }
 }

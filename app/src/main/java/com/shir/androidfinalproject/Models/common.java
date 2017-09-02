@@ -101,7 +101,7 @@ public class common {
             System.out.println("IOException ::" + e.toString());
         }
 
-        User fakeUser = new User(strFacebbokID, strFirstName, strLastName, strEmail, bmpImage);
+        User fakeUser = new User(strFacebbokID, strFirstName, strLastName, strEmail, bmpImage, src);
 
         return fakeUser;
     }

@@ -16,12 +16,21 @@ public class User {
     public String firstName;
     public String lastName;
     public String emailAddress;
-    public Bitmap picture;
-    public ArrayList<Event> eventsList;
+    private Bitmap picture;
+    public String pictureUrl;
+    public ArrayList<Event> eventsList = new ArrayList<>();
 
-    public ArrayList<User> friendsList;
+    public ArrayList<User> friendsList = new ArrayList<>();
 
-    public User(String strID, String strFirstName, String strLastName, String strEmail, Bitmap bmpPic)
+    public Bitmap getBitmap()
+    {
+        return picture;
+    }
+    public User()
+    {
+
+    }
+    public User(String strID, String strFirstName, String strLastName, String strEmail, Bitmap bmpPic, String picUrl)
     {
         this.id = strID;
         this.firstName = strFirstName;
@@ -30,6 +39,7 @@ public class User {
         this.picture = bmpPic;
         this.eventsList = new ArrayList<Event>();
         this.friendsList = new ArrayList<User>();
+        this.pictureUrl = picUrl;
     }
 
     public String getFullName()

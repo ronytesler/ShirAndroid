@@ -25,6 +25,7 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 //import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,7 +54,7 @@ public class LoginActivity extends AppCompatActivity
     FirebaseAuth.AuthStateListener firebaseAuthListener;
 
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mCondiotionRef = mRootRef.child("condition");
+    //DatabaseReference mCondiotionRef = mRootRef.child("condition");
 
     DatabaseReference mUsersRef = mRootRef.child("users");
 
@@ -61,51 +62,68 @@ public class LoginActivity extends AppCompatActivity
     protected void onStart(){
         super.onStart();
 
-        mCondiotionRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String text = dataSnapshot.getValue(String.class);
-                tvText.setText(text);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+//        mCondiotionRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                String text = dataSnapshot.getValue(String.class);
+//                tvText.setText(text);
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//
-//        firebaseAuth = FirebaseAuth.getInstance();
-//        startActivityForResult(AuthUI.getInstance()
-//                .createSignInIntentBuilder()
-//                .setProviders(
-//                        AuthUI.FACEBOOK_PROVIDER,
-//                        AuthUI.EMAIL_PROVIDER)
-//                .build(), 1);
 
         initControls();
-        logInWithFacebook();
+        //logInWithFacebook();
         // HASHKEY cSoxPH00SgxvFfCVOExPXUv23QE=
 
-        if (accessToken != null){
-            accessToken = com.facebook.AccessToken.getCurrentAccessToken();
-        }
+//        if (accessToken != null){
+//            accessToken = com.facebook.AccessToken.getCurrentAccessToken();
+//        }
 
-        LoginManager.getInstance().logOut();
-        DataManager.getInstance(this).setLoginWithFacebook(false);
+         //LoginManager.getInstance().logOut();
+         //DataManager.getInstance(this).setLoginWithFacebook(false);
 
         if (!DataManager.getInstance(this).isLoggedIn()) {
             logInWithFacebook();
         } else {
             // the user is logged in :)
-            goToMainActivity();
+            setCurrentUserData();
+
         }
     }
+private void setCurrentUserData()
+{
+    String userId = DataManager.getInstance(this).getUserId();
+    if (userId == null ||  userId.isEmpty())
+    {
+        logInWithFacebook();
+        return;
+    }
+
+    mUsersRef.child(userId).addValueEventListener(new ValueEventListener() {
+        @Override
+        public void onDataChange(DataSnapshot dataSnapshot) {
+            User connectedUser = dataSnapshot.getValue(User.class);
+            DataManager.getInstance(LoginActivity.this).saveUserId(connectedUser.id);
+            common.Instance().setCurrentUser(connectedUser);
+            goToMainActivity();
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError) {
+
+        }
+    });
+}
 
     private void initControls(){
         callbackManager = CallbackManager.Factory.create();
@@ -127,7 +145,8 @@ public class LoginActivity extends AppCompatActivity
                     @Override
                     public void onCompleted(JSONObject object, GraphResponse response){
                         DataManager.getInstance(getApplicationContext()).setLoginWithFacebook(true);
-                        displayUserInfo(object);
+                        saveUserInfo(object);
+                        goToMainActivity();
                     }
                 });
 
@@ -151,10 +170,10 @@ public class LoginActivity extends AppCompatActivity
             }
         });
 
-        loginBtn.setOnClickListener(this);
+        //loginBtn.setOnClickListener(this);
     }
 
-    private void displayUserInfo(JSONObject object) {
+    private void saveUserInfo(JSONObject object) {
 
         try {
 //            String strUserDetails = response.getRawResponse();
@@ -170,13 +189,13 @@ public class LoginActivity extends AppCompatActivity
             image.buildDrawingCache();
             Bitmap bmpImage = image.getDrawingCache();
 
-            User connectedUser = new User(strFacebbokID, strFirstName, strLastName, strEmail, bmpImage);
+            User connectedUser = new User(strFacebbokID, strFirstName, strLastName, strEmail, bmpImage, strImage);
             common.Instance().setCurrentUser(connectedUser);
-            mCondiotionRef.setValue(common.Instance().getUserID());
-
+            //  mCondiotionRef.setValue(common.Instance().getUserID());
+            DataManager.getInstance(this).saveUserId(connectedUser.id);
             mUsersRef.child(connectedUser.id).setValue(connectedUser);
 
-         //   Log.d(TAG, "onCompleted: jsonObject::" + object);
+            //   Log.d(TAG, "onCompleted: jsonObject::" + object);
             //goToMainActivity();
 //            String struser_friends = jsonObject.getString("user_friends");
 //            Log.d(TAG, "onCompleted: user_friends::" + struser_friends);
